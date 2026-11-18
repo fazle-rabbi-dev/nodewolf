@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://lh3.googleusercontent.com/d/1_MrK6BBbaqqx0lf_0NDC8F6UDU6WyWUF" alt="Made with Vibe Coding" width="50%" height="" />
+  <img src="https://lh3.googleusercontent.com/d/1QE3HWhllZB0hhE8cW9i0UsQsIqTMe9zL" alt="Made with Vibe Coding" width="50%" height="" />
 </div>
 
 # nodewolf
