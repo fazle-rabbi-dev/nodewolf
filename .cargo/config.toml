@@ -1,0 +1,3 @@
+# Static CRT: makes the .exe self-contained (no VCRUNTIME140.dll / VC++ redist needed).
+[build]
+rustflags = ["-C", "target-feature=+crt-static"]

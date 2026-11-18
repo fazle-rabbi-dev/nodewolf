@@ -1,0 +1,15 @@
+[package]
+name = "nodewolf"
+version = "0.1.0"
+edition = "2021"
+description = "TUI to find and delete node_modules folders on a drive"
+
+[dependencies]
+ratatui = "0.29"
+crossterm = "0.28"
+walkdir = "2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

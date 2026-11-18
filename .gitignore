@@ -1,0 +1,16 @@
+# Rust build output
+/target/
+**/*.rs.bk
+
+# Compiled binaries
+*.exe
+*.pdb
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local test output
+*.log
