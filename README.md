@@ -19,7 +19,42 @@ cargo build --release
 # binary: target/release/nodewolf.exe
 ```
 
-No global install needed. If you want it on PATH, copy the exe somewhere in `$env.PATH`.
+No global install needed, but here's how to do it if you want `nodewolf` available from anywhere.
+
+## Install globally
+
+Pick one.
+
+**A. `cargo install` (recommended)** — compiles and drops the binary in `~/.cargo/bin`, already on your PATH:
+
+```nu
+cd nodewolf
+cargo install --path .
+nodewolf --help
+```
+
+Upgrade: rerun `cargo install --path .` (add `--force` if it refuses).
+Remove: `cargo uninstall nodewolf`.
+
+**B. Copy the release exe yourself** — no recompile, keeps the static-CRT build:
+
+```nu
+cargo build --release
+cp target/release/nodewolf.exe ~/.cargo/bin/
+```
+
+Any folder already in PATH works (`~/.cargo/bin` on a normal Rust install).
+
+**C. Your own bin folder** — add it to PATH once:
+
+```nu
+mkdir ~/bin
+cp target/release/nodewolf.exe ~/bin/
+# then add this line to your Nushell config ($nu.config-path):
+#   $env.PATH = ($env.PATH | prepend $"($env.USERPROFILE)/bin")
+```
+
+Check it worked from a fresh shell: `nodewolf --list .`
 
 ## Keys
 
